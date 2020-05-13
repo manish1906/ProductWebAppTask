@@ -1,0 +1,13 @@
+<form [formGroup]="addcartFormGroup">
+    <div class="container">
+    
+    <div class="col-md-6 offset-md-3">
+    
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label >Quantity</label>
+        <input type="number" class="form-control" formControlName="quantity"  placeholder="Enter Quantity" required>
+      </div>
+      <button [disabled]="!addcartFormGroup.valid" class="btn btn-primary btn-block" (click)="addcart()" >Add to Cart</button>
+</div></div>
+</div></form>
