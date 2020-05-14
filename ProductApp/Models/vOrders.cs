@@ -17,5 +17,6 @@ namespace ProductApp.Models
         public DateTime ShipDate { get; set; }
         public string Address { get; set; }
         public string OrderStatus { get; set; }
+        public int Quantity { get; set; }
     }
 }

@@ -24,6 +24,7 @@ namespace ProductApp.Domain
               
                 vCarts1.ProductDescription = reader.GetString(4);
                 vCarts1.TotalPrice = reader.GetInt32(5);
+                vCarts1.Quantity = reader.GetInt32(6);
                 vCarts.Add(vCarts1);
 
             }

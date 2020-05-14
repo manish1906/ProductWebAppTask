@@ -28,6 +28,7 @@ namespace ProductApp.Domain
                 vOrders1.ShipDate = reader.GetDateTime(7);
                 vOrders1.Address = reader.GetString(8);
                 vOrders1.OrderStatus = reader.GetString(9);
+                vOrders1.Quantity = reader.GetInt32(10);
 
                 vOrders.Add(vOrders1);
 
@@ -57,7 +58,7 @@ namespace ProductApp.Domain
                 vOrders1.ShipDate = reader.GetDateTime(7);
                 vOrders1.Address = reader.GetString(8);
                 vOrders1.OrderStatus = reader.GetString(9);
-
+                vOrders1.Quantity = reader.GetInt32(10);
                 vOrders.Add(vOrders1);
 
             }

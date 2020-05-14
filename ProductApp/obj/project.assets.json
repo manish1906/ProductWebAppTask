@@ -8323,11 +8323,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProductApp\\ProductApp\\ProductApp.csproj",
+      "projectUniqueName": "D:\\ProductWebAppTask\\ProductApp\\ProductApp.csproj",
       "projectName": "ProductApp",
-      "projectPath": "D:\\ProductApp\\ProductApp\\ProductApp.csproj",
+      "projectPath": "D:\\ProductWebAppTask\\ProductApp\\ProductApp.csproj",
       "packagesPath": "C:\\Users\\radix\\.nuget\\packages\\",
-      "outputPath": "D:\\ProductApp\\ProductApp\\obj\\",
+      "outputPath": "D:\\ProductWebAppTask\\ProductApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\radix\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -11,7 +11,7 @@ namespace ProductApp.Models
         public int UserId { get; set; }
         public string ProductName { get; set; }
         public string ProductBrand { get; set; }
-        
+        public int Quantity { get; set; }
         public string ProductDescription { get; set; }
         public int TotalPrice { get; set; }
 
