@@ -10,6 +10,8 @@ namespace ProductApp.Models
         public int OrderID { get; set; }
         public int CartId { get; set; }
         public DateTime OrderDate { get; set; }
+     
         public DateTime ShipDate { get; set; }
+        public int OrderStatus { get; set; }
     }
 }

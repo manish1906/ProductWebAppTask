@@ -12,6 +12,6 @@
     <input type="password" class="form-control" formControlName="password" placeholder="Password" required>
   </div>
   
-  <button [disabled]="!loginFormGroup.valid" (click)="login()" class="btn btn-primary btn-block" >Login</button>
+  <button type="button" [disabled]="!loginFormGroup.valid" (click)="login()" class="btn btn-primary btn-block" >Login</button>
   </div></div>
 </form>

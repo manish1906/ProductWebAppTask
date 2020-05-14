@@ -16,6 +16,7 @@ namespace ProductApp.Models
         public string Gender { get; set; }
         public string Address { get; set; }
         public DateTime DOB { get; set; }
+      
 
     }
 }

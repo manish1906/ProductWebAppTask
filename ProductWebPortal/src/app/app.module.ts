@@ -22,6 +22,10 @@ import { UserProductComponent } from './user-product/user-product.component';
 import { CartComponent } from './cart/cart.component';
 import { AddcartComponent } from './cart/addcart/addcart.component';
 import { OrdersComponent } from './orders/orders.component';
+import { AgGridModule } from 'ag-grid-angular';
+
+import { AdminorderListComponent } from './adminorder-list/adminorder-list.component';
+import { UpdateorderComponent } from './adminorder-list/updateorder/updateorder.component';
 
 
 @NgModule({
@@ -41,11 +45,14 @@ import { OrdersComponent } from './orders/orders.component';
     UserProductComponent,
     CartComponent,
     AddcartComponent,
-    OrdersComponent
+    OrdersComponent,
+    
+    AdminorderListComponent,
+    UpdateorderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule,ReactiveFormsModule,HttpClientModule
+    AppRoutingModule,  AgGridModule.withComponents([]), FormsModule,ReactiveFormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

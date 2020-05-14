@@ -18,6 +18,14 @@ namespace ProductApp.Controllers
 
             this.orderDomain = new OrderDomain();
         }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var order = this.orderDomain.GetAllOrder();
+            return Ok(order);
+
+        }
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -33,5 +41,12 @@ namespace ProductApp.Controllers
         
         
         }
+        [HttpPut]
+        public IActionResult Put(Orders orders)
+        {
+            orderDomain.Update(orders);
+            return Ok();
+        }
+
     }
 }

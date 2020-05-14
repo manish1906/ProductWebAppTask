@@ -35,10 +35,11 @@ register()
 
 
   var gender=parseInt(this.userregisterFormGroup.controls.gender.value)
+  var mn=parseInt(this.userregisterFormGroup.controls.mobileNumber.value);
 this.http.post('https://localhost:44319/api/user',{
     FirstName:this.userregisterFormGroup.controls.firstName.value,
     LastName:this.userregisterFormGroup.controls.lastName.value,
-    MobileNumber:this.userregisterFormGroup.controls.mobileNumber.value,
+    MobileNumber:mn,
     Email:this.userregisterFormGroup.controls.email.value,
     Password:this.userregisterFormGroup.controls.password.value,
      Gender:gender,

@@ -16,6 +16,6 @@ namespace ProductApp.Models
         public DateTime OrderDate { get; set; }
         public DateTime ShipDate { get; set; }
         public string Address { get; set; }
-
+        public string OrderStatus { get; set; }
     }
 }

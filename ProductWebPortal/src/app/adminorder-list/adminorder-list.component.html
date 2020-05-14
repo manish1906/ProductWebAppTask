@@ -1,0 +1,59 @@
+
+  
+   <div class="container">
+    <div class="">
+  <div class="col-md-6 ">
+<table class="table">
+
+  <thead>
+  <tr>
+    <th><h4>OrderList</h4></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  
+
+  </tr>
+  
+  </thead>
+  
+
+  
+    <tr>
+      
+      <th scope="col">ProductName</th>
+      <th scope="col">ProductBrand</th>
+      
+      <th scope="col">ProductDescription</th>
+      <th scope="col">TotalPrice</th>
+      <th scope="col">OrderDate</th>
+      <th scope="col">ShipDate</th>
+      <th scope="col">ShipAddress</th>
+      <th scope="col">OrderStatus</th>
+      <th scope="col">Update</th>
+    </tr>
+ 
+  <tr *ngFor="let r of result ">
+  
+    <td scope="col">{{r.productName}}</td>
+    <td scope="col">{{r.productBrand}}</td>
+   
+     <td scope="col">{{r.productDescription}}</td>
+     <td scope="col">{{r.totalPrice}}</td>
+     <td scope="col">{{r.orderDate}}</td>
+     <td scope="col">{{r.shipDate}}</td>
+     <td scope="col">{{r.address}}</td>
+     <td scope="col">{{r.orderStatus}}</td>
+
+   
+     <td><a [routerLink]="['/updateorder',r.ordderId]"> <i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+    
+    
+    
+  
+    
+  </tr>
+</table>
+  </div>
+    </div></div>

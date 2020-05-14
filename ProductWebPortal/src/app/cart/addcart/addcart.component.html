@@ -8,6 +8,6 @@
         <label >Quantity</label>
         <input type="number" class="form-control" formControlName="quantity"  placeholder="Enter Quantity" required>
       </div>
-      <button [disabled]="!addcartFormGroup.valid" class="btn btn-primary btn-block" (click)="addcart()" >Add to Cart</button>
+      <button type="button"[disabled]="!addcartFormGroup.valid" class="btn btn-primary btn-block" (click)="addcart()" >Add to Cart</button>
 </div></div>
 </div></form>

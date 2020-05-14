@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -8,14 +8,59 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'ProductPortal';
- //display:boolean=true;
- //loginFormGroup:FormGroup;
-  result:any;
- logout()
+//  display:boolean=true;
+//  //loginFormGroup:FormGroup;
+//  userloginFormGroup:FormGroup;
+//   result:any;
+//   form:boolean=false;
+//   admin:boolean=false;
+//   user:boolean=true;
+//     constructor(private formBuilder:FormBuilder, private router:Router,private http:HttpClient) { }
+
+//     ngOnInit() {
+//         this.userloginFormGroup=this.formBuilder.group({
+
+//       email:['',Validators.required],
+//       password:['',Validators.required]
+
+
+//     })
+//     }
+// login()
+// {
+  
+  
+//               this.http.post('https://localhost:44319/api/userlogin',{
+//                   Email:this.userloginFormGroup.controls.email.value,
+//                   Password:this.userloginFormGroup.controls.password.value
+                
+//                 }).subscribe(res=>{
+//                   this.result=res;
+//                 sessionStorage.setItem("userid",this.result);
+//                   if(this.result!=0)
+//                   {
+//                     this.router.navigate(['/user']);
+//                   }
+//                   else
+//                   {
+//                     alert("Email or Password Wrong");
+                  
+//                   }
+                
+//                 }              
+//                 );
+//                 this.admin=true;
+//                 this.user=false;
+//                 this.form=true;
+
+// }
+logout()
  {
 //this.display=false;
    sessionStorage.removeItem("key");
+   sessionStorage.removeItem("userid");
+  // this.router.navigate(['/userlogin'])
  }
  }

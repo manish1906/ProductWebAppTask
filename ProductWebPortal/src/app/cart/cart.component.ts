@@ -13,7 +13,7 @@ id:any;
   constructor(private http:HttpClient,private router:Router) { }
 
   ngOnInit(): void {
-    this.id=sessionStorage.getItem("key");
+    this.id=sessionStorage.getItem("userid");
     this.http.get('https://localhost:44319/api/cart/'+this.id).subscribe(t => {
             this.result = t;
             console.log(this.result);

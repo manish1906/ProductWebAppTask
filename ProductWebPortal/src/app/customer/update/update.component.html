@@ -44,12 +44,16 @@
         <input type="text" class="form-control" formControlName="address" placeholder="Address" required>  
       </div>
 
+      <div class="form-group col-md-12">
+        <label>Password</label>
+        <input type="text" class="form-control" formControlName="password" placeholder="Password" required>  
+      </div>
 
     </div>
     
     
    
-    <button [disabled]="!upadtecustomerFormGroup.valid" class="btn btn-primary btn-block" (click)="update()" >Update</button>
+    <button type="button" [disabled]="!upadtecustomerFormGroup.valid" class="btn btn-primary btn-block" (click)="update()" >Update</button>
   
     </div></div>
   </form>

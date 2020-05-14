@@ -12,6 +12,15 @@ export class UserProductComponent implements OnInit {
  searchText: string;
   result:any;
   searchformGroup:FormGroup;
+  columnDefs = [
+    {headerName: 'ProdutName', field: 'produtName', sortable: true, filter: true},
+    {headerName: 'ProductBrand', field: 'productBrand', sortable: true, filter: true},
+    {headerName: 'ProductPrice', field: 'productPrice', sortable: true, filter: true},
+    {headerName: 'ProductDescription', field: 'productDescription', sortable: true, filter: true}
+    
+    
+];
+rowData:any;
   // public pstatus=[{status:'Active'},{status:'InActive'}];
   constructor(private router:Router,private http:HttpClient,private formBuilder:FormBuilder) { }
 
@@ -21,14 +30,14 @@ export class UserProductComponent implements OnInit {
       search:'',
       filter:''
     })
-    this.http.get<any>('https://localhost:44319/api/userlogin').subscribe(t => 
+   this.http.get<any>('https://localhost:44319/api/userlogin').subscribe(t => 
     
            { this.result = t;
             console.log(this.result);
-           
+           this.rowData=this.result;
             }
         );
-        
+    
   }
 Search()
 {

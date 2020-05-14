@@ -20,7 +20,8 @@ namespace ProductApp.Domain
                 vUsers1.FirstName = reader.GetString(1);
                 vUsers1.LastName = reader.GetString(2);
                 vUsers1.Email = reader.GetString(3);
-                vUsers1.MobileNumber = reader.GetInt64(4);
+                vUsers1.MobileNumber = reader.GetInt32(4);
+                vUsers1.Password = reader.GetString(8);
                 vUsers1.DOB = reader.GetDateTime(5);
                 vUsers1.Gender = reader.GetString(6);
                 vUsers1.Address = reader.GetString(7);
@@ -49,11 +50,11 @@ namespace ProductApp.Domain
 
         public void Add(Users users)
         {
-            this.ExecuteNonQuery($"insert into users values ('{users.FirstName}','{users.LastName}','{users.Email}',{users.MobileNumber},'{users.DOB}',{users.Gender},'{users.Address}','{users.Password}')");
+            this.ExecuteNonQuery($"insert into users values ('{users.FirstName}','{users.LastName}','{users.Email}',{users.MobileNumber},convert(date,'{users.DOB}',104),{users.Gender},'{users.Address}','{users.Password}')");
         }
         public void Update(Users users)
         {
-            this.ExecuteNonQuery($"update users set FirstName='{users.FirstName}',LastName='{users.LastName}',MobileNumber={users.MobileNumber},Email='{users.Email}',Password='{users.Password}',DOB='{users.DOB}',Address='{users.Address}',Gender='{users.Gender}' where UserId = {users.UserId}");
+            this.ExecuteNonQuery($"update users set FirstName='{users.FirstName}',LastName='{users.LastName}',MobileNumber={users.MobileNumber},Email='{users.Email}',Password='{users.Password}',DOB=convert(date,'{users.DOB}',104),Address='{users.Address}',Gender='{users.Gender}' where UserId = {users.UserId}");
         }
         public void Delete(int id)
         {

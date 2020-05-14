@@ -32,7 +32,7 @@ login()
                 
                 }).subscribe(res=>{
                   this.result=res;
-                sessionStorage.setItem("key",this.result);
+                sessionStorage.setItem("userid",this.result);
                   if(this.result!=0)
                   {
                     this.router.navigate(['/user']);

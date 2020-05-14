@@ -1,4 +1,9 @@
-
+<button [routerLink]="['/adminorderlist']" class="btn btn-light" >
+  Order List
+    </button>
+    <button [routerLink]="['/customer']" class="btn btn-light">
+      Customer Profile
+    </button>
  <div class=""> 
   <div class="col-md-6 ">
 <table class="table">
@@ -22,6 +27,7 @@
       <th scope="col">LastName</th>
       <th scope="col">MobileNumber</th>
       <th scope="col">Email</th>
+      <th scope="col">Password</th>
     <th scope="col">Gender</th>
      <th scope="col">DOB</th>
       <th scope="col">Address</th>
@@ -37,14 +43,15 @@
     <td scope="col">{{r.lastName}}</td>
     <td scope="col">{{r.mobileNumber}}</td>
     <td scope="col">{{r.email}}</td>
+    <td scope="col">{{r.password}}</td>
     <td scope="col">{{r.gender}}</td>
     <td scope="col">{{r.dob}}</td>
     <td scope="col">{{r.address}}</td>
     
     
    
-     <td><a [routerLink]="['/updatecustomer',r.customerCode,r.firstName,r.lastName,r.mobileNumber,r.email,r.gender,r.dob,r.address]"> <i class="fa fa-pencil" aria-hidden="true"></i></a></td>
-     <td><button (click)="delete(r.customerCode)" ><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+     <td><a [routerLink]="['/updatecustomer',r.customerCode,r.firstName,r.lastName,r.mobileNumber,r.email,r.gender,r.dob,r.address,r.password]"> <i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+     <td><button type="button" (click)="delete(r.customerCode)" ><i class="fa fa-trash" aria-hidden="true"></i></button></td>
      
   </tr>
 </table>

@@ -41,8 +41,8 @@
       <td scope="col">{{r.totalPrice}}</td>
       
        <!-- <td><a [routerLink]="['/order',r.cartId]">Place Order</a></td> -->
-       <td><button (click)="order(r.cartId)" >Place Order</button></td>
-       <td><button (click)="delete(r.cartId)" ><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+       <td><button type="button" (click)="order(r.cartId)" >Place Order</button></td>
+       <td><button type="button" (click)="delete(r.cartId)" ><i class="fa fa-trash" aria-hidden="true"></i></button></td>
       
     </tr>
   </table>

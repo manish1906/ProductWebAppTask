@@ -14,7 +14,7 @@ namespace ProductApp.Domain
 
             var reader = this.GetReader($"select *from vCart where userid={id} order by cartid");
             
-            var vCarts = new List<vCart>();
+            var vCarts = new List<vCart>(); 
             while (reader.Read())
             {
                 var vCarts1 = new vCart();

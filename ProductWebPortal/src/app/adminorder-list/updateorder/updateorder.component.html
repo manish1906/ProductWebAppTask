@@ -1,0 +1,24 @@
+<form [formGroup]="updateorderFormGroup">
+<div class="form-group col-md-12">
+    <label >ShipDate</label>
+     <input type="date" class="form-control"  formControlName="shipDate" required>
+   </div>
+   
+
+
+<div >
+    <label>Order Status</label>
+   <br>
+  <div class="form-group col-md-12">
+    <input  type="radio" formControlName="status"  name="status" value="7" required>
+<label>Packed</label>
+<input  type="radio" formControlName="status"  name="status" value="8" required>
+<label>Shiped</label>
+<input  type="radio" formControlName="status"  name="status" value="9" required>
+<label>Delivered</label>
+<input  type="radio" formControlName="status"  name="status" value="10" required>
+<label>Canceled</label>
+</div>
+</div>
+<button type="button" [disabled]="!updateorderFormGroup.valid" class="btn btn-primary btn-block" (click)="update()" >Update</button>
+</form>

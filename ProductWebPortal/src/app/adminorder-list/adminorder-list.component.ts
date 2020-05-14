@@ -2,23 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-orders',
-  templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css']
+  selector: 'app-adminorder-list',
+  templateUrl: './adminorder-list.component.html',
+  styleUrls: ['./adminorder-list.component.css']
 })
-export class OrdersComponent implements OnInit {
+export class AdminorderListComponent implements OnInit {
   result:any;
   id:any;
     constructor(private http:HttpClient) { }
   
     ngOnInit(): void {
-      this.id=sessionStorage.getItem("userid");
-      this.http.get('https://localhost:44319/api/order/'+this.id).subscribe(t => {
+    
+      this.http.get('https://localhost:44319/api/order').subscribe(t => {
               this.result = t;
               console.log(this.result);
           });
       
   
     }
-  
+
 }
