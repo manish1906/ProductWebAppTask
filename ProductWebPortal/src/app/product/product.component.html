@@ -38,6 +38,7 @@
 
   
     <tr>
+      <th scope="col">ProductImage</th>
       <th scope="col">ProductCode</th>
       <th scope="col">ProductName</th>
       <th scope="col">ProductBrand</th>
@@ -50,6 +51,7 @@
     </tr>
  
   <tr *ngFor="let r of result ">
+    <td scope="col"><img style="width: 100px;height: 100px;" src="{{r.productImage}}"></td>
     <td scope="col">{{r.productCode}}</td>
     <td scope="col">{{r.productName}}</td>
     <td scope="col">{{r.productBrand}}</td>
@@ -57,7 +59,7 @@
     <td scope="col">{{r.productDescription}}</td>
     <td scope="col">{{r.productStatus}}</td>
     
-     <td><a [routerLink]="['/updateproduct',r.productCode,r.productName,r.productBrand,r.productPrice,r.productDescription,r.productStatus]"> <i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+     <td><a [routerLink]="['/updateproduct',r.productCode,r.productName,r.productBrand,r.productPrice,r.productDescription,r.productStatus,r.productImage]"> <i class="fa fa-pencil" aria-hidden="true"></i></a></td>
      <td><button type="button" (click)="delete(r.productCode)" ><i class="fa fa-trash" aria-hidden="true"></i></button></td>
     
   </tr>

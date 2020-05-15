@@ -13,5 +13,6 @@ namespace ProductApp.Models
         public int ProductPrice { get; set; }
         public int ProductStatus { get; set; }
         public string ProductDescription { get; set; }
+        public string ProductImage { get; set; }
     }
 }

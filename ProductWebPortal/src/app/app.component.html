@@ -3,61 +3,44 @@
 <nav class="navbar navbar-expand-lg navbar-light ">
 
  
- <button [routerLink]="['/register']" class="btn btn-light">
+ <button [routerLink]="['/register']" class="btn btn-light" [hidden]="home">
    Admin Register
   </button>
-<button [routerLink]="['/login']" class="btn btn-light">
+<button [routerLink]="['/login']" class="btn btn-light" [hidden]="home" >
    Admin Login
   </button>
  
- <button [routerLink]="['/product']" class="btn btn-light">
+ <button [routerLink]="['/product']" class="btn btn-light"  [hidden]="display">
     Product List
   </button>
-<button [routerLink]="['/customer']" class="btn btn-light">
+<button [routerLink]="['/customer']" class="btn btn-light"[hidden]="display">
     Customer Profile
   </button>
+  
 <button (click)="logout()"class="btn btn-light">
    Logout
   </button>
-<button [routerLink]="['/userlogin']" class="btn btn-light">
+<button [routerLink]="['/userlogin']" class="btn btn-light" [hidden]="home">
    UserLogin
   </button>
-<button [routerLink]="['/userregister']" class="btn btn-light">
+<button [routerLink]="['/userregister']" class="btn btn-light"[hidden]="home">
    UserRegister
   </button>
-<button [routerLink]="['/user']" class="btn btn-light">
+<button [routerLink]="['/user']" class="btn btn-light" [hidden]="user">
    UserProfile
   </button>
-<button [routerLink]="['/userproduct']" class="btn btn-light">
+<button [routerLink]="['/userproduct']" class="btn btn-light" [hidden]="product">
    UserProduct
-  </button>
+</button>
 
-  <button [routerLink]="['/cart']" class="btn btn-light">
+  <button [routerLink]="['/cart']" class="btn btn-light"[hidden]="user">
 Show Cart
   </button>
 
-  <button [routerLink]="['/order']" class="btn btn-light">
+  <button [routerLink]="['/order']" class="btn btn-light"[hidden]="user">
 Orders Details
       </button>
     
 </nav>
 
-<!--  
- <form [formGroup]="userloginFormGroup" [hidden]="form">
-  <div class="container">
-   
- <div class="col-md-6 offset-md-3">
- <div class="form-group">
-   <label>Email </label>
-   <input type="email" class="form-control" formControlName="email"  placeholder="Enter email" required>
-   
- </div>
- <div class="form-group">
-   <label>Password</label>
-   <input type="password" class="form-control" formControlName="password" placeholder="Password" required>
- </div>
- 
- <button type="button" [disabled]="!userloginFormGroup.valid" (click)="login()" class="btn btn-primary btn-block" >Login</button>
- </div></div>
-</form> -->
 <router-outlet></router-outlet>

@@ -16,6 +16,7 @@ export class UpdateproductComponent implements OnInit {
       productPrice:any;
       productStatus:any;
 productDescription:any;
+image:any;
 updateproductFormGroup:FormGroup;
   constructor(private formBuilder:FormBuilder,private router:Router,private http:HttpClient,private activateRoute:ActivatedRoute) { }
  
@@ -26,15 +27,15 @@ updateproductFormGroup:FormGroup;
     this.productPrice=this.activateRoute.snapshot.paramMap.get("productPrice");
     this.productStatus=this.activateRoute.snapshot.paramMap.get("productStatus");
      this.productDescription=this.activateRoute.snapshot.paramMap.get("productDescription");
-   
+   this.image=this,this.activateRoute.snapshot.paramMap.get("image");
   
     this.updateproductFormGroup=this.formBuilder.group({
       productName:[this.productName,Validators.required],
       productBrand:[this.productBrand,Validators.required],
       productPrice:[this.productPrice,Validators.required],
       productStatus:[this.productStatus,Validators.required],
-      productDescription:[this.productDescription,Validators.required]
-
+      productDescription:[this.productDescription,Validators.required],
+      image:[this.image,Validators.required]
     })
   }
 update()
@@ -47,7 +48,8 @@ update()
     ProductBrand:this.updateproductFormGroup.controls.productBrand.value,
     ProductPrice:price,
     ProductStatus:status , 
-   ProductDescription:this.updateproductFormGroup.controls.productDescription.value
+   ProductDescription:this.updateproductFormGroup.controls.productDescription.value,
+   ProductImage:this.updateproductFormGroup.controls.image.value
    
   }).subscribe(res=>{this.result=res;    
   

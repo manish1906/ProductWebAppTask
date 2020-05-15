@@ -20,14 +20,14 @@ import { AdminorderListComponent } from './adminorder-list/adminorder-list.compo
 import { UpdateorderComponent } from './adminorder-list/updateorder/updateorder.component';
 const routes: Routes = [
   
-    // { path: '', component: LoginComponent },
+   
     { path: 'login', component: LoginComponent },
     { path: 'register' ,component: RegisterComponent },
 { path: 'product' ,component: ProductComponent },
 { path: 'customer' ,component: CustomerComponent },
 { path: 'updatecustomer/:customerCode/:firstName/:lastName/:mobileNumber/:email/:gender/:dob/:address/:password' ,component: UpdateComponent },
 { path: 'addproduct' ,component: AddproductComponent },
-{ path: 'updateproduct/:productCode/:productName/:productBrand/:productPrice/:productDescription/:productStatus' ,component: UpdateproductComponent },
+{ path: 'updateproduct/:productCode/:productName/:productBrand/:productPrice/:productDescription/:productStatus/:productImage' ,component: UpdateproductComponent },
 { path: 'userlogin' ,component: UserLoginComponent },
 { path: 'user' ,component: UserComponent },
 { path: 'updateuser/:userId/:firstName/:lastName/:mobileNumber/:email/:gender/:dob/:address/:password' ,component:UserupdateComponent  },

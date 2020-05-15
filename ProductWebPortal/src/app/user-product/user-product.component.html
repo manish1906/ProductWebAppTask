@@ -29,25 +29,25 @@
 
   
     <tr>
-      
+      <th scope="col">ProductImage</th>
       <th scope="col">ProductName</th>
       <th scope="col">ProductBrand</th>
       <th scope="col">ProductPrice</th>
       <th scope="col">ProductDescription</th>
       
-      <th scope="col">Add to Cart</th>
+      <th scope="col" *ngIf="!product">Add to Cart</th>
       
     </tr>
  
   <tr *ngFor="let r of result ">
-  
+    <td scope="col"><img style="width: 100px;height: 100px;" src="{{r.productImage}}"></td>
     <td scope="col">{{r.productName}}</td>
     <td scope="col">{{r.productBrand}}</td>
     <td scope="col">{{r.productPrice}}</td>
      <td scope="col">{{r.productDescription}}</td>
     
 
-     <td><a [routerLink]="['/addcart',r.productCode]">Add to Cart</a></td>
+     <td *ngIf="!product"><a [routerLink]="['/addcart',r.productCode]">Add to Cart</a></td>
      
     
     

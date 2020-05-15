@@ -19,8 +19,8 @@ result:any;
       productBrand:['',Validators.required],
       productPrice:['',Validators.required],
       productStatus:['',Validators.required],
-      productDescription:['',Validators.required]
-
+      productDescription:['',Validators.required],
+      image:''
 
     })
   }
@@ -36,7 +36,8 @@ add()
     ProductBrand:this.addproductFormGroup.controls.productBrand.value,
     ProductPrice:price,
     ProductStatus:status ,
-    ProductDescription :this.addproductFormGroup.controls.productDescription.value
+    ProductDescription :this.addproductFormGroup.controls.productDescription.value,
+    ProductImage:this.addproductFormGroup.controls.image.value
    
    
   }).subscribe(res=>{this.result=res;

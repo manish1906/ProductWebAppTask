@@ -21,10 +21,19 @@ export class UserProductComponent implements OnInit {
     
 ];
 rowData:any;
+product:boolean=true;
+user:any;
   // public pstatus=[{status:'Active'},{status:'InActive'}];
   constructor(private router:Router,private http:HttpClient,private formBuilder:FormBuilder) { }
 
   ngOnInit() {
+
+this.user=sessionStorage.getItem("userid");
+if(this.user!=null)
+{
+this.product=false;
+
+}
     this.searchformGroup=this.formBuilder.group({
 
       search:'',

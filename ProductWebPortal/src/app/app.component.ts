@@ -8,59 +8,40 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  {
+export class AppComponent implements OnInit {
   title = 'ProductPortal';
-//  display:boolean=true;
-//  //loginFormGroup:FormGroup;
-//  userloginFormGroup:FormGroup;
-//   result:any;
-//   form:boolean=false;
-//   admin:boolean=false;
-//   user:boolean=true;
-//     constructor(private formBuilder:FormBuilder, private router:Router,private http:HttpClient) { }
+home:boolean=false;
+userid:any;
+admin:any;
+display:boolean=true;
+user:boolean=true;
+product:boolean=false;
+constructor(private router:Router){}
+ngOnInit(){
 
-//     ngOnInit() {
-//         this.userloginFormGroup=this.formBuilder.group({
+this.userid=sessionStorage.getItem("userid");
+this.admin=sessionStorage.getItem("key");
 
-//       email:['',Validators.required],
-//       password:['',Validators.required]
-
-
-//     })
-//     }
-// login()
-// {
-  
-  
-//               this.http.post('https://localhost:44319/api/userlogin',{
-//                   Email:this.userloginFormGroup.controls.email.value,
-//                   Password:this.userloginFormGroup.controls.password.value
-                
-//                 }).subscribe(res=>{
-//                   this.result=res;
-//                 sessionStorage.setItem("userid",this.result);
-//                   if(this.result!=0)
-//                   {
-//                     this.router.navigate(['/user']);
-//                   }
-//                   else
-//                   {
-//                     alert("Email or Password Wrong");
-                  
-//                   }
-                
-//                 }              
-//                 );
-//                 this.admin=true;
-//                 this.user=false;
-//                 this.form=true;
-
-// }
+console.log(this.userid,this.admin);
+if(this.userid!=null && this.admin==null){
+  this.user=false;
+  this.home=true;
+}
+else if(this.userid==null && this.admin!=null)
+{
+  this.display=false;
+  this.product=true;
+  this.home=true;
+}
+}
 logout()
  {
 //this.display=false;
    sessionStorage.removeItem("key");
    sessionStorage.removeItem("userid");
-  // this.router.navigate(['/userlogin'])
+ this.router.navigate(['/userlogin'])
+  //window.location.reload();
  }
- }
+
+
+}

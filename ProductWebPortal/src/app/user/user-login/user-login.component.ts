@@ -36,6 +36,7 @@ login()
                   if(this.result!=0)
                   {
                     this.router.navigate(['/user']);
+                   
                   }
                   else
                   {
@@ -45,6 +46,7 @@ login()
                 
                 }              
                 );
+            
 
 }
 }
